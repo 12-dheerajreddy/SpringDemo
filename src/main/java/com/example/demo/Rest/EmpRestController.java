@@ -67,15 +67,6 @@ public class EmpRestController {
 		//Mono<String> just = Mono.just(deleteEmp);
 		return new ResponseEntity<Mono<String>>(deleteEmp,HttpStatus.OK);
 	}
-	@GetMapping(value = "/find/{empId}",produces = "application/json")
-	public ResponseEntity<Mono<Emp>> FindById1(@PathVariable int empId){
-		
-		Mono<Emp> retriveEmp = empServ.RetriveEmp(empId);
-		//Mono<Emp> retemp=Mono.just(retriveEmp);
-		
-		
-		return new ResponseEntity<Mono<Emp>>(retriveEmp, HttpStatus.OK);
-	}
 
 	
 	
